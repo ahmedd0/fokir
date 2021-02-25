@@ -437,7 +437,7 @@
 
 }
 
-@media screen and (min-width:770px) {
+@media screen and (min-width:993px) {
     .header .header-content .navbar .nav-links .menu {
         display: none;
     }
