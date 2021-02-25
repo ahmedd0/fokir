@@ -454,7 +454,7 @@ a {
 
 .testmonial-card .card-items {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     padding-left: 50px;
     padding: 15px;
 }
@@ -507,7 +507,7 @@ a {
     top: 0;
     border-bottom: 200px solid transparent;
     border-left: 200px solid #ff305b;
-    z-index: 1;
+    z-index: 0;
 }
 
 .testmonials .bullets {
