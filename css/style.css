@@ -71,6 +71,7 @@ a {
     height: 100vh;
     background-image: url(../imgs/slider-01.jpg);
     background-size: cover;
+    background-position: center center;
     position: relative;
     color: white;
     line-height: normal;
