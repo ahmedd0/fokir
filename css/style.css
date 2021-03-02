@@ -92,8 +92,8 @@ a {
     padding: 20px 0;
 }
 
-.header .header-content .navbar .nav-item {
-    float: left;
+.header .header-content .navbar .navbar-items {
+    display: flex;
 }
 
 .header .header-content .navbar .nav-logo {
@@ -110,11 +110,11 @@ a {
 }
 
 .header .header-content .navbar .nav-links ul {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .header .header-content .navbar .nav-links ul li {
-    float: left;
     margin-right: 20px;
 }
 
@@ -137,15 +137,28 @@ a {
 .header .header-content {
     position: relative;
     z-index: 2;
-    height: 60px;
     height: 100%;
 }
 
-.header .header-content .header-text {
+.header .header-content .header-caption {
+    /* AFTER USING FLEX BOX */
     position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.header .header-content .header-text {
+    /* BEFORE USING FLEX BOX */
+    /* position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%; */
+    /* transform: translate(-50%, -50%); */
 }
 
 .header .header-content .header-text span {
@@ -170,8 +183,12 @@ a {
     margin-top: 100px;
 }
 
+.about .about-sections {
+    display: flex;
+}
+
 .about .about-section {
-    float: left;
+    /* float: left; */
     width: 50%;
 }
 
@@ -207,6 +224,27 @@ a {
     transition: all 0.4s ease-out;
 }
 
+.about .about-pic .img-container .img-box .about-social ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.about .about-pic .img-container .img-box .about-social ul li {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.about .about-pic .img-container .img-box .about-social ul li a {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.about .about-pic .img-container .img-box .about-social ul li a:hover {
+    color: #ff305b;
+}
+
 .about .about-pic .img-container .img-box:hover .about-social {
     transform: translateY(0);
 }
@@ -231,8 +269,13 @@ a {
     margin-bottom: 20px;
 }
 
+.about .about-text .info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .about .about-text .info li {
-    float: left;
+    /* float: left; */
     width: 40%;
     font-size: 16px;
     font-weight: 400;
@@ -288,11 +331,12 @@ a {
     overflow: hidden;
     margin-top: 20px;
     padding: 20px 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .services .items .item {
-    float: left;
-    width: 25%;
+    /* width: 25%; */
     padding: 50px 10px;
     transition: all 0.5s ease;
 }
@@ -315,8 +359,13 @@ a {
     transition: all 0.5s ease;
 }
 
+.services .items .item .icon i {
+    color: #ff305b;
+    font-size: 36px;
+}
+
 .services .items .item h3 {
-    margin-bottom: 15px;
+    margin: 15px 10px 0 0;
     color: #333333;
     font-size: 24px;
 }
@@ -346,11 +395,8 @@ a {
 }
 
 .portfolio .gallery-menu {
-    position: relative;
-    display: inline-block;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
 }
 
 .portfolio .gallery-menu li {
@@ -358,7 +404,7 @@ a {
     font-size: 18px;
     font-weight: 600;
     padding: 5px 10px;
-    float: left;
+    /* float: left; */
 }
 
 .portfolio .gallery-menu .active {
@@ -367,10 +413,12 @@ a {
 
 .portfolio .gallery .gallery-items {
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 .portfolio .gallery .gallery-item {
-    float: left;
     width: 33.33%;
 }
 
@@ -395,9 +443,20 @@ a {
     opacity: 0;
     transition: all 0.5s ease;
 }
+.portfolio .gallery .gallery-item .details .icon{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: black;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
 
 .portfolio .gallery .gallery-item .details:hover {
     opacity: 1;
+}
+.portfolio .gallery .gallery-item .details:hover .icon{
+    color: #ff305b;
 }
 
 /* ======= END PORTFOLIO ======== */
@@ -409,15 +468,25 @@ a {
     background-color: #f1f1f1;
 }
 
+.counter .counter-items {
+    display: flex;
+}
+
 .counter .counter-items .counter-item {
-    float: left;
+    /* float: left; */
     width: 25%;
+}
+
+.counter-item .counter-icon i {
+    color: #ff305b;
+    font-size: 26px;
 }
 
 .counter .counter-items .counter-item h3 {
     color: #333;
     font-size: 26px;
     font-weight: 800;
+    margin-top: 10px;
 }
 
 .counter .counter-items .counter-item p {
@@ -457,15 +526,17 @@ a {
     z-index: 1;
     padding-left: 50px;
     padding: 15px;
+    display: flex;
 }
 
 .testmonial-card .card-item {
-    float: left;
+    /* float: left; */
 }
 
 .testmonial-card .img {
     text-align: center;
     width: 110px;
+    height: 110px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -510,12 +581,23 @@ a {
     z-index: 0;
 }
 
+.testmonial-content .test-icons .stars {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.testmonial-content .test-icons .stars li i {
+    padding-right: 5px;
+    color: #f1c30d;
+    font-size: 16px;
+}
+
 .testmonials .bullets {
     margin-top: 10px;
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
 }
 
 .testmonials .pill {
@@ -524,13 +606,13 @@ a {
 
     background-color: #ff305b;
     border-radius: 20px;
-    float: left;
+    /* float: left; */
 }
 
 .testmonials .circle {
     width: 10px;
     height: 10px;
-    float: left;
+    /* float: left; */
     margin-left: 10px;
 
     border: 1px solid #ff305b;
@@ -554,10 +636,11 @@ a {
 
 .blog .blog-items {
     margin-top: 30px;
+    display: flex;
 }
 
 .blog .blog-items .blog-item {
-    float: left;
+    /* float: left; */
     width: 33.33%;
     padding: 10px;
 }
@@ -642,12 +725,14 @@ a {
     width: 65%;
     margin: auto;
     margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contact-us .form-element {
     display: block;
     width: 50%;
-    float: left;
+    /* float: left; */
     padding: 10px;
 
     overflow: hidden;
@@ -695,9 +780,31 @@ a {
     color: white;
 }
 
+.footer .social-media ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.footer .social-media ul li {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.footer .social-media ul li a {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.footer .social-media ul li a:hover {
+    color: #ff305b;
+}
+
 .footer .copyright p {
-    font-weight: 900;
-    font-size: 17px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 /* ======== END FOOTER ========== */

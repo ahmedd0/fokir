@@ -39,6 +39,10 @@
         font-weight: bold;
     }
 
+    .about .about-sections {
+        flex-direction: column;
+    }
+
     .about .about-section {
         width: 100%;
     }
@@ -55,6 +59,9 @@
         margin-bottom: 20px;
     }
 
+    .about .about-text .info {
+        flex-direction: column;
+    }
 
     .about .about-text .info li {
         width: 100%;
@@ -71,12 +78,20 @@
         padding: 50px 0;
     }
 
+    .services .items {
+        flex-direction: column;
+    }
+
     .services .items .item {
         width: 100%;
     }
 
     .portfolio {
         margin-top: 50px;
+    }
+
+    .portfolio .gallery .gallery-items {
+        flex-direction: column;
     }
 
     .portfolio .gallery .gallery-item {
@@ -88,6 +103,10 @@
         margin-top: 50px;
     }
 
+    .counter .counter-items {
+        flex-direction: column;
+    }
+
     .counter .counter-items .counter-item {
         width: 100%;
         margin-bottom: 25px;
@@ -95,6 +114,17 @@
 
     .testmonials .testmonial-card {
         width: 100%;
+    }
+    .testmonials .testmonial-card .testmonial-content{
+        width: 100%;
+    }
+
+    .testmonial-card .card-items {
+        flex-direction: column;
+    }
+
+    .blog .blog-items {
+        flex-direction: column;
     }
 
     .blog .blog-items .blog-item {
@@ -190,8 +220,11 @@
         font-weight: bold;
     }
 
+    .about .about-sections {
+        flex-direction: column;
+    }
+
     .about .about-section {
-        float: none;
         width: 70%;
         margin: auto;
     }
@@ -223,10 +256,13 @@
         padding: 50px 0;
     }
 
+    .services .items {
+        flex-direction: column;
+    }
+
     .services .items .item {
         width: 70%;
         margin: auto;
-        float: none;
     }
 
     .portfolio {
@@ -235,13 +271,16 @@
 
     .portfolio .gallery .gallery-item {
         width: 70%;
-        float: none;
         margin: auto;
     }
 
     .counter {
         padding: 50px 0;
         margin-top: 50px;
+    }
+
+    .counter .counter-items {
+        flex-direction: column;
     }
 
     .counter .counter-items .counter-item {
@@ -252,10 +291,20 @@
     .testmonials .testmonial-card {
         width: 70%;
     }
+    .testmonials .testmonial-card .testmonial-content{
+        width: 100%;
+    }
+
+    .testmonial-card .card-items {
+        flex-direction: column;
+    }
+    
+    .blog .blog-items {
+        flex-direction: column;
+    }
 
     .blog .blog-items .blog-item {
         width: 70%;
-        float: none;
         margin: auto;
     }
 
