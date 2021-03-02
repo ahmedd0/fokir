@@ -354,7 +354,6 @@ a {
     margin-bottom: 20px;
     height: 50px;
     width: 50px;
-    background-color: white;
     margin: auto;
     transition: all 0.5s ease;
 }
@@ -443,7 +442,8 @@ a {
     opacity: 0;
     transition: all 0.5s ease;
 }
-.portfolio .gallery .gallery-item .details .icon{
+
+.portfolio .gallery .gallery-item .details .icon {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -455,7 +455,8 @@ a {
 .portfolio .gallery .gallery-item .details:hover {
     opacity: 1;
 }
-.portfolio .gallery .gallery-item .details:hover .icon{
+
+.portfolio .gallery .gallery-item .details:hover .icon {
     color: #ff305b;
 }
 
